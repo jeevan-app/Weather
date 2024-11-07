@@ -44,10 +44,13 @@ async function updateweatherinfo(city){
 
     if(weatherdata.cod != 200) {
         showDisplaySection(notFoundSection);
-            function_five();
+
+        function_five();
         return;
     }
-    console.log(weatherdata);
+    // console.log(weatherdata);
+
+    notFoundSection.style.display = "none";
 
     const{
         name: country,
@@ -161,6 +164,5 @@ async function getfetchdata(endpoint, city){
 function function_five(){
     document.getElementById("last1").style.display = "none";
 }
-
 
 
